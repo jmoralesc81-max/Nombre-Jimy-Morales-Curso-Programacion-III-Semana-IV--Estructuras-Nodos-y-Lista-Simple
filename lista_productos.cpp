@@ -13,7 +13,7 @@ struct Nodo {
 };
 
 int main() {
-    cout << "Nombre del Estudiante: [Tu Nombre Completo Aqui]" << endl;
+    cout << "Nombre del Estudiante:" << endl;
     cout << "------------------------------------------" << endl;
 
     Nodo* primero = new Nodo;
@@ -31,7 +31,7 @@ int main() {
     cin.ignore();
     cout << "Nombre: "; getline(cin, segundo->data.nombre);
     cout << "Precio: Q"; cin >> segundo->data.precio;
-    primero->siguiente = segundo; // ENLACE MANUAL
+    primero->siguiente = segundo; 
 
     Nodo* tercero = new Nodo;
     tercero->siguiente = nullptr;
@@ -40,7 +40,7 @@ int main() {
     cin.ignore();
     cout << "Nombre: "; getline(cin, tercero->data.nombre);
     cout << "Precio: Q"; cin >> tercero->data.precio;
-    segundo->siguiente = tercero; // ENLACE MANUAL
+    segundo->siguiente = tercero; 
 
     Nodo* cuarto = new Nodo;
     cuarto->siguiente = nullptr;
@@ -49,11 +49,9 @@ int main() {
     cin.ignore();
     cout << "Nombre: "; getline(cin, cuarto->data.nombre);
     cout << "Precio: Q"; cin >> cuarto->data.precio;
-    tercero->siguiente = cuarto; // ENLACE MANUAL
+    tercero->siguiente = cuarto; 
 
-    cout << "\n==========================================" << endl;
     cout << "       LISTADO DE PRODUCTOS EN INGRESADOS" << endl;
-    cout << "==========================================" << endl;
 
     double totalAcumulado = 0;
     Nodo* actual = primero;
@@ -78,4 +76,5 @@ int main() {
     }
 
     return 0;
+
 }
